@@ -1,34 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="#" style="color:darkblue"><b>My Store</b></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: flex-end">
-        <a class="nav-link" style="color: purple" href="#">Products</a>
-        <a class="nav-link" style="color: purple" href="#">Checkout</a>  
-  </div>
-</nav>
+<app-header></app-header>
 <div class="container wrapper" >
-  <input class="form-control form-control-lg" type="text" placeholder="Search Here">
+  <app-search></app-search>
   <div class="row">
-    <div class="col-4">
+    <app-product class="col-4"></app-product>
+    <app-product class="col-4"></app-product>
+    <app-product class="col-4"></app-product>
+    <app-product class="col-4"></app-product>
+    <app-product class="col-4"></app-product>
+    <app-product class="col-4"></app-product>
+    <!-- <div class="col-4">
       <div class="card">
         <img src="https://images-na.ssl-images-amazon.com/images/I/61Lnw%2BeeaZL._SX425_.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Amazing bags</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Add To Cart</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-4 d-flex align-items-stretch">
-      <div class="card">
-        <img src="https://previews.123rf.com/images/kornienko/kornienko1608/kornienko160800187/61816306-chisinau-moldova-may-23-2016-new-style-nike-shoes-taken-at-studio-and-isolated-over-white-background.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Amazing Shoes</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Add To Cart</a>
+          <a href="#" class="btn btn-primary" style="float: right">Buy Now</a>
         </div>
       </div>
     </div>
@@ -39,11 +26,12 @@
           <h5 class="card-title">Amazing bags</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Add To Cart</a>
+          <a href="#" class="btn btn-primary" style="float: right">Buy Now</a>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 <footer style="height: 20px" style="background-color: lightgray">
-  <p class="text-center">&copy; Tom Cherian</p>
+  <p>&copy;my_store.com</p>
 </footer>        
