@@ -1,12 +1,16 @@
 <!-- <p>product works!</p> -->
 <!-- <div class="col-4"> -->
     <div class="card">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/61Lnw%2BeeaZL._SX425_.jpg" class="card-img-top" alt="...">
+      <img [src]="product.imageUrl" class="card-img-top" [alt]="product.message">
       <div class="card-body">
-        <h5 class="card-title">Amazing bags</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Add To Cart</a>
-        <a href="#" class="btn btn-primary" style="float: right">Buy Now</a>
+        <h5 class="card-title">{{product.title | lowercase}}</h5>
+        <p class="card-text">{{product.description}}</p>
+        <p class="text-success">{{product.price}}</p>
+        <a href="#" class="btn btn-primary" *ngIf="product.isAvailable; else buyer" (click)="addToCart()">Add To Cart</a>
+        <ng-template #buyer>
+          <button class="btn btn-warning" (click)="goToDetails(product.id)">Sold Out</button>
+        </ng-template>
+        <a  class="btn btn-primary" *ngIf="product.isAvailable; " style="float: right" (click)="goToDetails(product.id)">Buy Now</a>
       </div>
     </div>
   <!-- </div> -->

@@ -1,0 +1,5 @@
+<app-search></app-search>
+<div class="row">
+  <app-product *ngFor="let item of products" class="col-4" [product]="item"></app-product>
+  <p>{{products|json}}</p>
+</div>

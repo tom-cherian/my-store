@@ -5,7 +5,9 @@
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: flex-end">
-          <a class="nav-link" style="color: purple" href="#">Products</a>
-          <button class="nav-link" style="color:black; background-color: lightblue; border-radius: 10px;" href="#">Checkout</button>  
+      <div class="navbar-nav">
+          <a class="nav-item nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="">Products</a>
+          <a class="nav-item nav-link" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="check-out">Checkout</a>
     </div>
+  </div>
   </nav>
