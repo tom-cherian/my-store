@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/Product';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -24,12 +25,22 @@ export class ProductService {
     //   message : `loading image...`,
     //   isAvailable: true,
     // }
-
+// private baseUrl = 'http://localhost:3000/';
   constructor(
     private httpClient: HttpClient
   ) {}
 
   getProducts() {
-    return this.httpClient.get('http://localhost:3000/product');
+    return this.httpClient.get(`${environment.baseUrl}product`);
   }
+
+  getProduct(productId) {
+    return this.httpClient.get(environment.baseUrl + '/product/' + productId);
+  }
+  addProduct(product) {
+    return this.httpClient.post(`${environment.baseUrl}product`, product);
+  }
+deleteProd(id) {
+  return this.httpClient.delete(`${environment.baseUrl}product/` + id, id );
+}
 }

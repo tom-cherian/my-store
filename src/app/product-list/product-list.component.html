@@ -1,5 +1,6 @@
-<app-search></app-search>
+<h1>{{searchTerm}}</h1>
+<app-search (newPushEvent)="newPushMessage($event)"></app-search>
 <div class="row">
-  <app-product *ngFor="let item of products" class="col-4" [product]="item"></app-product>
-  <p>{{products|json}}</p>
+  <app-product (newDeleteEvent)='getProducts()' *ngFor="let item of products" class="col-4" [product]="item"></app-product>
 </div>
+

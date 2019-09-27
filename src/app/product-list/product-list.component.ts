@@ -8,15 +8,25 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
- products: Product[] = [];
- constructor(private productService: ProductService) {
+  products: Product[] = [];
+  constructor(private productService: ProductService) {
+    this.productService.getProducts().
+      subscribe((res: Product[]) => {
+        this.products = res;
+      });
+  }
+  searchTerm = '';
+  ngOnInit() {
+  }
+  newPushMessage($event) {
+    console.log($event);
+    this.searchTerm = $event;
+
+  }
+ getProducts() {
   this.productService.getProducts().
   subscribe((res: Product[]) => {
     this.products = res;
- });
-}
-
-  ngOnInit() {
-  }
-
+  });
+ }
 }
